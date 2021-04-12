@@ -1,0 +1,15 @@
+[run]
+omit = 
+    tests/*,
+    setup.py,
+    .tox/*
+    # omit anything in a .local directory anywhere
+    */.local/*
+    # omit everything in /usr
+    /usr/*
+
+[report]
+#Exclude "main" function lines as they are almost impossible to test
+# and should call a real function immediately
+exclude_lines =
+    if __name__ == .__main__.:

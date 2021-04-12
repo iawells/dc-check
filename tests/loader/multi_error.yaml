@@ -1,0 +1,48 @@
+version: 1
+
+servers:
+    # server friendly names and their serial numbers
+    server1: 12345678
+    server2: '12345678'
+    server3: '12145678'
+    server4: '12315678'
+    server5: '12341678'
+
+switches:
+    mgmt: abcdef
+    tor1: abcdeg
+    tor2: abcdeh
+    tor2: abcdej
+
+racks:
+    rack19:
+        # Numbers range from 0..41, rack units from the top of the rack
+        19: mgmtflob
+        0: mgmt
+        1: server1
+        2: server3
+        3: server4
+        4: server5
+        5: server2
+        6: tor1
+        7: tor2
+
+connections:
+  # - [rack-loc, port, rack-unit, port]
+  # management port is 0
+  rack19:
+    - [1, 0, 0, 1]
+    - [2, 0, 0, 2]
+    - [3, 0, 0, 3]
+    - [4, 0, 0, 4]
+    - [5, 0, 0, 5]
+    - [1, 1, 6, 1]
+    - [1, 2, 7, 1]
+    - [2, 1, 6, 2]
+    - [2, 2, 7, 2]
+    - [3, 1, 6, 3]
+    - [3, 2, 7, 3]
+    - [4, 1, 6, 4]
+    - [4, 2, 7, 4]
+    - [5, 1, 6, 5]
+    - [5, 2, 7, 5]

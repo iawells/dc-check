@@ -1,0 +1,12 @@
+#!/bin/sh
+
+set -ex
+
+dir="`dirname "$0"`"
+
+cd "$dir"
+for f in .tox .stestr .mypy_cache dc_check.egg-info .eggs; do
+    rm -rf "$f"
+done
+
+find . -name __pycache__ -exec rm -rf {} \;
